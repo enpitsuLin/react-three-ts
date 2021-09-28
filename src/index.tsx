@@ -10,10 +10,10 @@ ReactDOM.render(
 			<App />
 			<div className="link-nav">
 				<NavLink to="/simple" activeClassName="active">
-					simple
+					simple &gt;&gt;
 				</NavLink>
 				<NavLink to="/grass" activeClassName="active">
-					grass
+					grass &gt;&gt;
 				</NavLink>
 			</div>
 		</BrowserRouter>

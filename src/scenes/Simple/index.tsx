@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Stats, OrbitControls } from "@react-three/drei";
 import Box from "../../resources/Geometries/Box";
 import Scene from "../../components/Scene";
+import Ground from "./components/Ground";
 
 const SimplePage: React.FC = () => (
 	<Canvas
@@ -16,7 +17,9 @@ const SimplePage: React.FC = () => (
 		<OrbitControls />
 		<Box castShadow />
 		<Suspense fallback={null}>
-			<Scene />
+			<Scene skyBox={false}>
+				<Ground />
+			</Scene>
 		</Suspense>
 	</Canvas>
 );

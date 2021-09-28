@@ -5,17 +5,11 @@ import Grass from "./components/Grass";
 import Scene from "../../components/Scene";
 
 const GrassPage: React.FC = () => (
-	<Canvas
-		shadows
-		onCreated={({ gl }) => {
-			gl.setClearColor("#252934");
-		}}
-		camera={{ position: [0, 2, 10], near: 0.1, far: 1000, zoom: 1, fov: 50 }}
-	>
+	<Canvas camera={{ position: [15, 15, 30] }}>
 		<Stats />
-		<OrbitControls />
+		<OrbitControls minPolarAngle={Math.PI / 5} maxPolarAngle={Math.PI / 2.5} />
 		<Suspense fallback={null}>
-			<Scene>
+			<Scene axesHelper={false} gridHelper={false}>
 				<Grass />
 			</Scene>
 		</Suspense>

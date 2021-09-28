@@ -1,6 +1,5 @@
 import { Sky, softShadows } from "@react-three/drei";
 import React from "react";
-import Ground from "./Ground";
 
 softShadows();
 
@@ -31,7 +30,6 @@ const Scene: React.FC<SceneProps> = (props = defaultProp) => {
 			{gridHelper && <gridHelper />}
 			{axesHelper && <axesHelper />}
 			{skyBox && <Sky azimuth={1} inclination={0.6} distance={1000} />}
-			<Ground />
 			{props.children}
 		</>
 	);
