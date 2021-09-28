@@ -1,6 +1,6 @@
 import { Sky, softShadows } from "@react-three/drei";
 import React from "react";
-import Grass from "./Grass";
+import Ground from "./Ground";
 
 softShadows();
 
@@ -20,9 +20,10 @@ const Scene: React.FC = () => (
 			shadow-camera-top={10}
 			shadow-camera-bottom={-10}
 		/>
-
+		<gridHelper />
+		<axesHelper />
 		<Sky azimuth={1} inclination={0.6} distance={1000} />
-		<Grass />
+		<Ground />
 	</>
 );
 

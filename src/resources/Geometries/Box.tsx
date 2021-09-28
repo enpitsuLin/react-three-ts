@@ -9,7 +9,7 @@ const Box: React.FC<MeshProps> = props => {
 	useFrame((state, delta) => (ref.current.rotation.x += 0.01));
 
 	return (
-		<mesh {...props} ref={ref} scale={active ? 1.5 : 1} onClick={() => setActive(!active)} position={[0, 5, 0]}>
+		<mesh {...props} ref={ref} scale={active ? 1.5 : 1} onClick={() => setActive(!active)} position={[0, 1.2, 0]}>
 			<boxGeometry args={[1, 1, 1]} />
 			<meshStandardMaterial color="royalblue" attach="material" />
 		</mesh>
