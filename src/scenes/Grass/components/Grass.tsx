@@ -3,9 +3,9 @@ import { useRef, useMemo } from "react";
 import SimplexNoise from "simplex-noise";
 import { extend, useFrame, useLoader } from "@react-three/fiber";
 import { Geometry } from "three/examples/jsm/deprecated/Geometry";
-import bladeDiffuse from "../resources/Textures/blade_diffuse.jpg";
-import bladeAlpha from "../resources/Textures/blade_alpha.jpg";
-import GrassMaterial from "../resources/Materials/GrassMaterial";
+import bladeDiffuse from "../../../resources/Textures/blade_diffuse.jpg";
+import bladeAlpha from "../../../resources/Textures/blade_alpha.jpg";
+import GrassMaterial from "../../../resources/Materials/GrassMaterial";
 
 interface GrassProp {
 	options?: { bW: number; bH: number; joints: number };
