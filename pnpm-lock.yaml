@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@react-three/cannon': ^3.1.2
   '@react-three/drei': ^7.12.4
   '@react-three/fiber': ^7.0.7
   '@testing-library/jest-dom': ^5.14.1
@@ -22,6 +23,7 @@ specifiers:
   typescript: ^4.4.3
 
 dependencies:
+  '@react-three/cannon': registry.npmmirror.com/@react-three/cannon/3.1.2_ed7db309644769441039b224e6fa66f2
   '@testing-library/jest-dom': registry.nlark.com/@testing-library/jest-dom/5.14.1
   '@testing-library/react': registry.npmmirror.com/@testing-library/react/11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': registry.nlark.com/@testing-library/user-event/12.8.3
@@ -13323,6 +13325,24 @@ packages:
       webpack-dev-server: registry.npmmirror.com/webpack-dev-server/3.11.1_webpack@4.44.2
     dev: false
 
+  registry.npmmirror.com/@react-three/cannon/3.1.2_ed7db309644769441039b224e6fa66f2:
+    resolution: {integrity: sha1-jQz8Nkq+JPBFSDd7v8pAH+eaa10=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-three/cannon/download/@react-three/cannon-3.1.2.tgz}
+    id: registry.npmmirror.com/@react-three/cannon/3.1.2
+    name: '@react-three/cannon'
+    version: 3.1.2
+    peerDependencies:
+      react: '>=17.0'
+      react-dom: '>=17.0'
+    dependencies:
+      cannon-es: registry.npmmirror.com/cannon-es/0.18.0
+      cannon-es-debugger: registry.npmmirror.com/cannon-es-debugger/0.1.4_aafb651c0e8b89289a4a39d120211ff9
+      react: registry.npmmirror.com/react/17.0.2
+      react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - three
+      - typescript
+    dev: false
+
   registry.npmmirror.com/@react-three/drei/7.12.4_5b338950fc27e0785821ccd106cf9580:
     resolution: {integrity: sha1-Myj9SM8s8JGJlcijEUDxjZqSwYg=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-three/drei/download/@react-three/drei-7.12.4.tgz}
     id: registry.npmmirror.com/@react-three/drei/7.12.4
@@ -13822,6 +13842,27 @@ packages:
     version: 1.0.30001260
     dependencies:
       nanocolors: registry.npmmirror.com/nanocolors/0.1.12
+    dev: false
+
+  registry.npmmirror.com/cannon-es-debugger/0.1.4_aafb651c0e8b89289a4a39d120211ff9:
+    resolution: {integrity: sha1-Isea4UxS3kRGVpCYj/ZHxRx5xis=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cannon-es-debugger/download/cannon-es-debugger-0.1.4.tgz}
+    id: registry.npmmirror.com/cannon-es-debugger/0.1.4
+    name: cannon-es-debugger
+    version: 0.1.4
+    peerDependencies:
+      cannon-es: 0.x.x
+      three: 0.x.x
+      typescript: '>=3.8'
+    dependencies:
+      cannon-es: registry.npmmirror.com/cannon-es/0.18.0
+      three: registry.npmmirror.com/three/0.132.2
+      typescript: registry.npmmirror.com/typescript/4.4.3
+    dev: false
+
+  registry.npmmirror.com/cannon-es/0.18.0:
+    resolution: {integrity: sha1-roMf+d8jUtX6q7JpwR6g8QvDXH4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cannon-es/download/cannon-es-0.18.0.tgz}
+    name: cannon-es
+    version: 0.18.0
     dev: false
 
   registry.npmmirror.com/chevrotain/9.0.2:

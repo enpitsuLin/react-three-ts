@@ -4,7 +4,7 @@ import { Stats, OrbitControls } from "@react-three/drei";
 import Box from "../../resources/Geometries/Box";
 import Scene from "../../components/Scene";
 import Ground from "./components/Ground";
-import Pieces from "../../resources/Geometries/Pieces";
+import Pieces from "../../resources/Models/Pieces";
 
 const SimplePage: React.FC = () => (
 	<Canvas
