@@ -4,8 +4,7 @@ import { Stats, OrbitControls } from "@react-three/drei";
 import Box from "../../resources/Geometries/Box";
 import Scene from "../../components/Scene";
 import Ground from "./components/Ground";
-import Head from "../../resources/Geometries/Pieces/Head";
-import Body from "../../resources/Geometries/Pieces/Body";
+import Pieces from "../../resources/Geometries/Pieces";
 
 const SimplePage: React.FC = () => (
 	<Canvas
@@ -18,8 +17,7 @@ const SimplePage: React.FC = () => (
 		<Stats />
 		<OrbitControls />
 		<Box castShadow position={[2, 1.2, 0]} />
-		<Head castShadow />
-		<Body castShadow />
+		<Pieces />
 		<Suspense fallback={null}>
 			<Scene skyBox={false}>
 				<Ground />

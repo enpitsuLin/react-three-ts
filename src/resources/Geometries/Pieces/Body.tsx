@@ -1,25 +1,22 @@
 import { MeshProps } from "@react-three/fiber";
-import React, { useMemo } from "react";
+import React from "react";
 import * as THREE from "three";
-import { mergeBufferGeometries } from "three/examples/jsm/utils/BufferGeometryUtils";
 
 const Body: React.FC<MeshProps> = props => {
-	const headSize = 0.8;
-	const bodyBottomGeometry = new THREE.CylinderBufferGeometry(headSize * 0.9, (headSize * 1.2) / 2, headSize * 2.5, 16);
-	bodyBottomGeometry.translate(0, headSize * 1.25, 0);
-	const bodyCenterGeometry = new THREE.CylinderBufferGeometry(headSize, headSize * 0.9, headSize, 16);
-	bodyCenterGeometry.translate(0, headSize * 3, 0);
-	const bodyTopGeometry = new THREE.SphereGeometry(headSize, 16, 16);
-	bodyTopGeometry.translate(0, headSize * 3.5, 0);
+	const curve = new THREE.EllipseCurve(0, 2.25, 0.4, 0.4, 0, Math.PI / 2, false, 0);
+	const shape = new THREE.Shape([
+		...curve.getPoints(12).reverse(),
+		new THREE.Vector2(0.4, 2.25),
+		new THREE.Vector2(1, 0),
+		new THREE.Vector2(0, 0)
+	]);
 
-	const body = useMemo<THREE.BufferGeometry>(() => {
-		const base = mergeBufferGeometries([bodyBottomGeometry, bodyCenterGeometry, bodyTopGeometry]);
+	const points = shape.getPoints();
 
-		return base;
-	}, [bodyBottomGeometry, bodyCenterGeometry, bodyTopGeometry]);
 	return (
-		<mesh position={[0, 1.2, 0]} geometry={body} {...props}>
-			<meshStandardMaterial color="royalblue" attach="material" />
+		<mesh {...props} position={[0, 0.1, 0]}>
+			<latheBufferGeometry args={[points, 60, 0, Math.PI * 2]} />
+			<meshStandardMaterial side={THREE.DoubleSide} metalness={0} roughness={1} color="royalblue" attach="material" />
 		</mesh>
 	);
 };
