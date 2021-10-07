@@ -12,6 +12,7 @@ const Body: React.FC<MeshProps> = props => {
 	]);
 
 	const points = shape.getPoints();
+	
 
 	return (
 		<mesh {...props} position={[0, 0.1, 0]}>
